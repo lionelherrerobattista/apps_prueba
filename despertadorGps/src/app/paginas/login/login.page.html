@@ -1,0 +1,32 @@
+<ion-content>
+  <div class='contenedor-login'>
+    <ion-item>
+      <ion-label position="floating">Email:</ion-label>
+      <ion-input inputmode="email" type="email" [(ngModel)]="email"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label position="floating">Password:</ion-label>
+      <ion-input type="password" [(ngModel)]="password"></ion-input>
+    </ion-item>
+    <div class='contenedor-botones'>
+      <ion-button size="small" (click)="onIniciarSesion()">Ingresar</ion-button>
+      <ion-button size="small" class="ion-float-right" (click)="Limpiar()">Limpiar</ion-button>
+    </div>
+  </div>
+
+  <ion-fab vertical="bottom" horizontal="end" slot="fixed">
+    <ion-fab-button>
+      <ion-icon name="arrow-up-circle"></ion-icon>
+    </ion-fab-button>
+    <ion-fab-list side="top">
+      <ion-fab-button (click)="completarUsuario('admin')"><ion-icon name="desktop-outline"></ion-icon></ion-fab-button>
+      <ion-fab-button (click)="completarUsuario('tester')"><ion-icon name="language-outline"></ion-icon></ion-fab-button>
+      
+    </ion-fab-list>
+    <ion-fab-list side="start">
+      <ion-fab-button (click)="completarUsuario('usuario')"><ion-icon name="person-circle-outline"></ion-icon></ion-fab-button>
+      <ion-fab-button (click)="completarUsuario('invitado')"><ion-icon name="people-circle-outline"></ion-icon></ion-fab-button>
+      <ion-fab-button (click)="completarUsuario('anonimo')"><ion-icon name="man-outline"></ion-icon></ion-fab-button>
+    </ion-fab-list>
+  </ion-fab>
+</ion-content>

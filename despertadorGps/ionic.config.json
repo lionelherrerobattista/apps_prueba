@@ -1,0 +1,8 @@
+{
+  "name": "despertadorGpsApp",
+  "integrations": {
+    "capacitor": {},
+    "cordova": {}
+  },
+  "type": "angular"
+}

@@ -1,0 +1,35 @@
+
+ion-content{
+  --background: url('../../../assets/img/login_background.jpg')  no-repeat center center / cover;
+}
+
+ion-item {
+  --background: transparent;
+}
+
+ion-input {
+  --color: white;
+}
+
+ion-label {
+  --color: white !important;
+}
+
+.contenedor-login {
+  background: rgba(116, 111, 111, 0.6);
+  margin: 8vh 5vw 5vh 5vw;
+  padding: 2vh 3vw 2vh 3vw;
+  border-radius: 20px;
+}
+
+.contenedor-botones {
+  display: flex;
+  justify-content: space-between;
+  margin: 5vh 0 2vh 0;
+  padding: 0 8vw 0 8vw;
+}
+
+
+.row-botonoes {
+  justify-content: space-between;
+}

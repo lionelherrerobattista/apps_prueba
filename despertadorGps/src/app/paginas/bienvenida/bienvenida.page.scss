@@ -1,0 +1,45 @@
+ion-content{
+    --background: url('../../../assets/img/login_background.jpg')  no-repeat center center / cover;
+}
+
+.div-distancia {
+    background-color: white;
+    padding: 1vh 2vw 1vh 2vw;
+    margin: 0 2vw 2vh 2vw;
+    border-radius: 5px;
+}
+
+.div-titulo {
+    display:flex;
+    justify-content: center;
+    background-color: white;
+    padding: 1vh 1vw 1vh 1vw;
+    margin: 5vh 2vw 0 2vw;
+    border-radius: 5px;
+}
+
+#div-infogps {
+    background-color: white;
+    padding: 1vh 2vw 1vh 2vw;
+    margin: 2vh 2vw 3vh 2vw;
+    border-radius: 5px;
+}
+
+#div-actual{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+#div-destino{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+ion-button {
+    margin-bottom: 1.5vh;
+}
+
+  
+  

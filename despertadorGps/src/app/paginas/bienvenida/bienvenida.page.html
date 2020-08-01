@@ -1,0 +1,53 @@
+<!-- <ion-header>
+  <ion-toolbar>
+    <ion-title>Escribí la dirección y la distancia mínima</ion-title>
+  </ion-toolbar>
+</ion-header> -->
+
+<ion-content>
+
+  <div class="div-titulo">
+    <h3>Programá tu alarma</h3>
+  </div>
+
+  <div id="div-buscador" *ngIf="!alarmaActivada">
+    <ion-searchbar placeholder="Dirección" [(ngModel)]="direccionIngresada"></ion-searchbar>
+  
+    <div class="div-distancia">
+      <ion-label class="ion-text-wrap" position="stacked">Distancia mínima:</ion-label>
+      <ion-input type="number" placeholder="Distancia en metros" [(ngModel)]='distanciaMinima'></ion-input>
+    </div>
+  </div>
+  
+  <div id="div-infogps" *ngIf="alarmaActivada">
+    <div id="div-actual">
+      <p>Direccion actual:</p>
+        <ion-spinner *ngIf="direccionActual == undefined" name="crescent"></ion-spinner> 
+        <p  *ngIf="direccionActual != undefined">{{direccionActual}}</p>
+    </div>
+    
+    <div id="div-destino">
+      <p>Destino:</p>
+      <p>{{direccionIngresada}}</p>
+    </div>
+    <p *ngIf="distanciaActual != undefined">Estás a {{distanciaActual}} km. de tu destino </p>
+
+  </div>
+    
+  
+  <ion-button color="success" expand="block" *ngIf="!alarmaActivada" (click)="programarAlarma()" (click)="guardarDireccion()">Programar alarma</ion-button>
+  <ion-button color="danger" expand="block" *ngIf="alarmaActivada" (click)="cancelarAlarma()">Cancelar alarma</ion-button>
+  <ion-list  inset="true" lines="full">
+    <ion-list-header>
+     Tus direcciones anteriores:
+    </ion-list-header>
+    <ion-spinner *ngIf="listaDireccionesUsuario == undefined" name="crescent"></ion-spinner> 
+    <ion-item  *ngFor="let direccion of listaDireccionesUsuario">
+      <ion-label>
+        <h3 class="nombre-usuario">Dirección: {{direccion.direccion | titlecase}}</h3>
+        <p>Fecha: {{direccion.fecha.toDate() | date : 'dd/MM/yyyy'}}</p>
+        <p>Distancia: {{direccion.distancia + " mts."}}</p>
+      </ion-label>  
+    </ion-item>
+  </ion-list>
+</ion-content>
